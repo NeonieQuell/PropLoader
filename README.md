@@ -1,6 +1,6 @@
 # PropLoader
 
-A class library that helps load related entity properties.
+A class library that helps load EF Core-related entity properties.
 
 ## How to Use
 
