@@ -39,7 +39,7 @@ var includeOpt2 = new IncludeOptions<TEntity>(
 ### OptionsBuilder
 ```csharp
 // Generic repository GetByID() method
-public async Task<TEntity?> GetByID(TID id, IncludeOptions<TEntity>? includeOptions = null)
+public Task<TEntity?> GetByID(TID id, IncludeOptions<TEntity>? includeOptions = null)
 {
     IQueryable<TEntity> query = OptionsBuilder.Build<TEntity>(this.dbContext.Set<TEntity>(), includeOptions);
     return query.SingleOrDefault(e => EF.Property<TID>(e, this.PropertyID)!.Equals(id));
